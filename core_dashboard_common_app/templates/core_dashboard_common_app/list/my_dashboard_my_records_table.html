@@ -11,8 +11,9 @@
                        onchange="selectAll(this, '{{group}}')" />
             </th>
         {% endif %}
+        <th>ID</th>
         <th>Name</th>
-        <th>Template</th>
+        <th>Template TEST</th>
         <th>Last Modification date</th>
         {% if data.username_list %}
             <th>User</th>
@@ -31,6 +32,7 @@
                 <input type="checkbox" id={{data_loaded.data.id}} name={{group}}>
             </td>
             {% endif %}
+            <td>{{ data_loaded.data.id }}</td>
             <td>
                 {{ data_loaded.data.title }}
                 {% if data_loaded.data|has_draft:request.user %}
